@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        cursor: pointer;
+      }
+      div#playing-now {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        cursor: pointer;
+      }
+      div#drag {
+        -webkit-app-region: drag;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 50px;
+        z-index: 100;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="drag"></div>
+    <div id="playing-now">
+      <img
+        src="https://spotify-github-profile.vercel.app/api/view?uid=31pdpcquhjbfdyqmhp6j6sy3xaxq&cover_image=true&theme=default&show_offline=true&background_color=121212&bar_color_cover=true"
+        width="300"
+      />
+    </div>
+    <script>
+      document.querySelector("#playing-now").addEventListener("click", () => {
+        location.reload();
+      });
+    </script>
+  </body>
+</html>
